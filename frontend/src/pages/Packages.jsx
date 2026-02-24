@@ -2,30 +2,23 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { packages } from '../data/siteData';
 import PackageCard from '../components/PackageCard';
+import VideoBreadcrumbBanner from '../components/VideoBreadcrumbBanner';
+import SectionEffect from '../components/SectionEffect';
 
 const Packages = () => {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-cyan-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
-              Package Plans
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the perfect package for your business needs
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-black text-white">
+      <VideoBreadcrumbBanner
+        breadcrumb="Home / Package Plans"
+        heading="Website Package Plans"
+        subtitle="Select a package that matches your stage of growth—each option includes everything you need to launch a professional website."
+        videoSrc=""
+        height="short"
+        align="center"
+      />
 
       {/* Packages Section */}
-      <section className="py-20 bg-white" data-testid="packages-section">
+      <SectionEffect variant="page" className="py-20" data-testid="packages-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             {packages.map((pkg, index) => (
@@ -33,10 +26,10 @@ const Packages = () => {
             ))}
           </div>
         </div>
-      </section>
+      </SectionEffect>
 
       {/* Features Comparison */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-purple-50">
+      <SectionEffect variant="bento" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -44,7 +37,7 @@ const Packages = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="text-3xl font-bold text-white mb-8">
               All Packages Include
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -60,17 +53,17 @@ const Packages = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg text-center"
+                  className="bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg shadow-black/60 text-center border border-zinc-800"
                 >
                   <div className="text-4xl mb-3">{feature.icon}</div>
-                  <h3 className="font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 text-sm">{feature.desc}</p>
+                  <h3 className="font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-zinc-300 text-sm">{feature.desc}</p>
                 </motion.div>
               ))}
             </div>
           </motion.div>
         </div>
-      </section>
+      </SectionEffect>
     </div>
   );
 };

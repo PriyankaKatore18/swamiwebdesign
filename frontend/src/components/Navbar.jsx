@@ -22,30 +22,26 @@ const Navbar = () => {
   }, [location]);
 
   const isActivePath = (path) => location.pathname === path;
+  const whatsappLink = `https://wa.me/${siteInfo.whatsappNumber}?text=${encodeURIComponent(siteInfo.whatsappMessage)}`;
 
   return (
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/80 backdrop-blur-xl shadow-lg shadow-purple-500/5'
-            : 'bg-transparent'
+            ? 'bg-black/80 backdrop-blur-xl border-b border-yellow-400/30 shadow-lg shadow-black/40'
+            : 'bg-gradient-to-b from-black/90 via-black/60 to-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition"></div>
-                <div className="relative bg-gradient-to-r from-purple-600 to-cyan-500 text-white font-bold text-xl px-4 py-2 rounded-lg">
-                  <img
-                    src={siteInfo.logoPath}
-                    alt={siteInfo.name}
-                    className="h-8 w-auto"
-                  />
-                </div>
-              </div>
+            {/* Logo - text only */}
+            <Link
+              to="/"
+              className="text-[#ffd33d] font-bold text-xl sm:text-2xl tracking-tight hover:text-yellow-300 transition-colors"
+              data-testid="navbar-logo"
+            >
+              {siteInfo.name}
             </Link>
 
             {/* Desktop Navigation */}
@@ -56,8 +52,8 @@ const Navbar = () => {
                   to={link.path}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                     isActivePath(link.path)
-                      ? 'bg-gradient-to-r from-purple-600 to-cyan-500 text-white'
-                      : 'text-gray-700 hover:bg-gray-100'
+                      ? 'bg-[#ffd33d] text-black shadow-md shadow-yellow-500/40'
+                      : 'text-gray-300 hover:bg-zinc-800'
                   }`}
                   data-testid={`nav-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
                 >
@@ -69,14 +65,14 @@ const Navbar = () => {
             {/* CTA Button */}
             <div className="hidden lg:block">
               <a
-                href={`https://wa.me/${siteInfo.whatsappNumber}?text=Hi! I want to try Webakoof for free`}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group"
                 data-testid="try-for-free-button"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-xl blur opacity-75 group-hover:opacity-100 transition"></div>
-                <div className="relative bg-gradient-to-r from-purple-600 to-cyan-500 text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-transform">
+                <div className="absolute inset-0 bg-[#ffd33d] rounded-xl blur opacity-80 group-hover:opacity-100 transition"></div>
+                <div className="relative bg-[#ffd33d] text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-transform shadow-lg shadow-yellow-500/40">
                   Try For Free
                 </div>
               </a>
@@ -85,7 +81,7 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition"
+              className="lg:hidden p-2 rounded-lg hover:bg-zinc-800 transition text-gray-100"
               data-testid="mobile-menu-toggle"
               aria-label="Toggle mobile menu"
             >
@@ -101,7 +97,7 @@ const Navbar = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white border-t border-gray-200 overflow-hidden"
+              className="lg:hidden bg-black border-t border-zinc-800 overflow-hidden"
               data-testid="mobile-menu"
             >
               <div className="px-4 py-6 space-y-2">
@@ -111,8 +107,8 @@ const Navbar = () => {
                     to={link.path}
                     className={`block px-4 py-3 rounded-lg text-base font-medium transition ${
                       isActivePath(link.path)
-                        ? 'bg-gradient-to-r from-purple-600 to-cyan-500 text-white'
-                        : 'text-gray-700 hover:bg-gray-100'
+                        ? 'bg-[#ffd33d] text-black'
+                        : 'text-gray-200 hover:bg-zinc-800'
                     }`}
                     data-testid={`mobile-nav-link-${link.name.toLowerCase().replace(/\s+/g, '-')}`}
                   >
@@ -120,10 +116,10 @@ const Navbar = () => {
                   </Link>
                 ))}
                 <a
-                  href={`https://wa.me/${siteInfo.whatsappNumber}?text=Hi! I want to try Webakoof for free`}
+                  href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block bg-gradient-to-r from-purple-600 to-cyan-500 text-white px-4 py-3 rounded-lg font-semibold text-center mt-4"
+                  className="block bg-[#ffd33d] text-black px-4 py-3 rounded-lg font-semibold text-center mt-4"
                   data-testid="mobile-try-for-free-button"
                 >
                   Try For Free

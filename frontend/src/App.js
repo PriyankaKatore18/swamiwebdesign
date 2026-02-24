@@ -8,9 +8,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import LivePreview from "./pages/LivePreview";
 import Packages from "./pages/Packages";
-import SocialFeed from "./pages/SocialFeed";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 
 function App() {
@@ -20,12 +17,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about-webakoof" element={<About />} />
+          <Route path="/about-swami-web" element={<About />} />
           <Route path="/live-website-preview" element={<LivePreview />} />
           <Route path="/package-plans" element={<Packages />} />
-          <Route path="/social-feed" element={<SocialFeed />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

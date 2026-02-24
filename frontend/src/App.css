@@ -1,3 +1,10 @@
+/* App layout and alignment */
+.App {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
 /* Custom animations */
 @keyframes blob {
   0% {
@@ -97,4 +104,16 @@ html {
 
 .animate-float {
   animation: float 5s ease-in-out infinite;
+}
+
+@keyframes goldenParticles {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
 }

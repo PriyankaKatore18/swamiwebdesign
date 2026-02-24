@@ -1,28 +1,28 @@
 export const siteInfo = {
-  name: "Webakoof",
-  tagline: "Fast websites delivered in 24 hours",
+  name: "Swami Web",
+  tagline: "High-converting business websites in 24 hours",
   logoPath: "/assets/misc/logo.png",
   heroImagePath: "/assets/hero/hero-image.png",
-  aboutIntroImagePath: "/assets/hero/slide.svg",
-  aboutBreadcrumbBgPath: "/assets/hero/breadcrub-1.png",
-  footerBgClass: "bg-[#0b1220]",
-  phone: "+91 9699369117",
-  phoneSecondary: "+91 7757994416",
-  whatsappNumber: "919699369117",
-  email: "webakoofbypraavi@gmail.com",
-  address: "Second floor, Sun Rise Complex, next to Ankur Balrugnalay, above Nakoda Jewellers, Pune, Loni Kalbhor, Maharashtra 412201.",
+  heroBannerPath: "/assets/hero/banner.png",
+  aboutIntroImagePath: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&h=450&fit=crop&q=80",
+  aboutBreadcrumbBgPath: "/assets/hero/banner.png",
+  footerBgClass: "bg-black",
+  phone: "+91 9307533577",
+  phoneSecondary: "+91 9307533577",
+  whatsappNumber: "918446079635",
+  whatsappMessage: "book a demo wensite for your business",
+  email: "swamiweb18@gmail.com",
+  address: "We work remotely with clients across India, so you can get your website built from anywhere.",
   workingHours: "Mon - Fri 9:00 AM - 6:00 PM",
-  copyright: "Copyright © 2025 All rights reserved By Webakoof",
-  description: "Webakoof creates fast, custom websites with responsive designs, free domain, SSL, and hosting — all delivered in 24 hours."
+  copyright: "Copyright © 2025 All rights reserved By Swami Web",
+  description: "Swami Web delivers fast, high-converting business websites with modern responsive design, free domain, SSL, and managed hosting — all professionally launched within 24 hours."
 };
 
 export const navLinks = [
   { name: "Home", path: "/" },
-  { name: "About Webakoof", path: "/about-webakoof" },
+  { name: "About Swami Web", path: "/about-swami-web" },
   { name: "Live Website Preview", path: "/live-website-preview" },
   { name: "Package Plans", path: "/package-plans" },
-  { name: "Social Feed", path: "/social-feed" },
-  { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" }
 ];
 
@@ -44,12 +44,12 @@ export const testimonials = [
   {
     name: "Priya Sharma",
     rating: 5,
-    text: "Very professional team. The website is responsive and looks great on all devices. Highly recommend Webakoof!"
+    text: "Very professional team. The website is responsive and looks great on all devices. Highly recommend Swami Web!"
   },
   {
     name: "Amit Patel",
     rating: 5,
-    text: "Great experience working with Webakoof. Fast delivery, excellent support, and amazing results."
+    text: "Great experience working with Swami Web. Fast delivery, excellent support, and amazing results."
   },
   {
     name: "Sneha Desai",
@@ -91,10 +91,10 @@ export const blogPosts = [
       <h3>Key Elements of Responsive Design</h3>
       <p>A truly responsive website adapts its layout, images, and functionality to provide an optimal viewing experience. This includes flexible grids, responsive images, and CSS media queries that adjust content based on screen size.</p>
       
-      <h3>The Webakoof Approach</h3>
-      <p>At Webakoof, every website we create is built mobile-first. We ensure your site looks stunning and functions perfectly on devices of all sizes, from smartphones to large desktop monitors. Our responsive designs are tested across multiple devices to guarantee a flawless user experience.</p>
+      <h3>The Swami Web Approach</h3>
+      <p>At Swami Web, every website we create is built mobile-first. We ensure your site looks stunning and functions perfectly on devices of all sizes, from smartphones to large desktop monitors. Our responsive designs are tested across multiple devices to guarantee a flawless user experience.</p>
       
-      <p>Don't let an outdated, non-responsive website hold your business back. Contact Webakoof today and get a modern, mobile-responsive website delivered in just 24 hours!</p>
+      <p>Don't let an outdated, non-responsive website hold your business back. Contact Swami Web today and get a modern, mobile-responsive website delivered in just 24 hours!</p>
     `
   },
   {
@@ -123,10 +123,10 @@ export const blogPosts = [
       <h3>Voice Search Optimization</h3>
       <p>With the rise of voice assistants, optimizing for conversational queries and question-based searches is increasingly important. Structure your content to answer common questions directly.</p>
       
-      <h3>How Webakoof Helps</h3>
-      <p>Every website we build at Webakoof is SEO-optimized from the ground up. We implement clean code, fast loading times, proper heading structures, meta tags, and mobile responsiveness—all factors that search engines love.</p>
+      <h3>How Swami Web Helps</h3>
+      <p>Every website we build at Swami Web is SEO-optimized from the ground up. We implement clean code, fast loading times, proper heading structures, meta tags, and mobile responsiveness—all factors that search engines love.</p>
       
-      <p>Ready to improve your search rankings? Get an SEO-friendly website from Webakoof in just 24 hours!</p>
+      <p>Ready to improve your search rankings? Get an SEO-friendly website from Swami Web in just 24 hours!</p>
     `
   },
   {
@@ -156,10 +156,10 @@ export const blogPosts = [
       <h3>Domain Extensions in 2025</h3>
       <p>While .com remains the most recognized extension, alternatives like .in (for India), .co, .io (for tech companies), and industry-specific extensions like .tech or .store are gaining acceptance. Choose an extension that fits your business and audience.</p>
       
-      <h3>Free Domain with Webakoof</h3>
-      <p>Great news! Every Webakoof package includes a free domain name (.in or .com). Our team will help you brainstorm and register the perfect domain for your business as part of our 24-hour website delivery service.</p>
+      <h3>Free Domain with Swami Web</h3>
+      <p>Great news! Every Swami Web package includes a free domain name (.in or .com). Our team will help you brainstorm and register the perfect domain for your business as part of our 24-hour website delivery service.</p>
       
-      <p>Ready to establish your online presence? Get started with Webakoof today and receive your free domain, hosting, and a professionally designed website—all delivered in just 24 hours!</p>
+      <p>Ready to establish your online presence? Get started with Swami Web today and receive your free domain, hosting, and a professionally designed website—all delivered in just 24 hours!</p>
     `
   }
 ];
@@ -216,89 +216,52 @@ export const packages = [
 export const demoWebsites = [
   {
     name: "Agriculture",
-    imagePath: "/assets/demos/Agriculture.png",
+    imagePath: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=800&fit=crop&q=80",
     link: "https://drive.google.com/drive/folders/1KiEdNiGEPD68YvFL9SJ_qO3c19MFFAqI?usp=sharing"
   },
   {
     name: "Medical",
-    imagePath: "/assets/demos/Medical.png",
+    imagePath: "https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop",
     link: "https://drive.google.com/drive/folders/1x0_1oWQTr5qN_gHT9ht9kZJUIs8kZ77n?usp=sharing"
   },
   {
     name: "Realestate",
-    imagePath: "/assets/demos/Realestate.png",
+    imagePath: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=800&fit=crop&q=80",
     link: "https://drive.google.com/drive/folders/1_iPLnT6fY0kUnBqDgHCL42ey2w1RCTmU?usp=sharing"
   },
   {
     name: "Grampanchayat",
-    imagePath: "/assets/demos/Grampanchayat.png",
+    imagePath: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=800&h=800&fit=crop&q=80",
     link: "https://drive.google.com/drive/folders/1ag4Gb-D4lrrGFQqTLp5_C20zNAS6y8Lk?usp=sharing"
   },
   {
     name: "Temples",
-    imagePath: "/assets/demos/Temple.png",
+    imagePath: "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&h=800&fit=crop&q=80",
     link: "https://drive.google.com/drive/folders/1mvPOVmWfSH4xkHiLXy6XjDiDb18IBy8v?usp=sharing"
   },
   {
     name: "Masala Spices",
-    imagePath: "/assets/demos/Masala%20Spices.png",
+    imagePath: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&h=800&fit=crop&q=80",
     link: "https://drive.google.com/drive/folders/1X9LsyWW-EfwPBEONByKG3uhdjclNYWQS?usp=sharing"
   },
   {
     name: "Matrimony",
-    imagePath: "/assets/demos/Matrimony.png",
+    imagePath: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=800&fit=crop&q=80",
     link: "https://drive.google.com/drive/folders/1MoEsOeERl7MAO8KdNZXqYcSOw_EMOO_Z?usp=sharing"
   },
   {
     name: "Construction",
-    imagePath: "/assets/demos/Construction.png",
+    imagePath: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=800&fit=crop&q=80",
     link: "https://drive.google.com/drive/folders/10MOncCL_y-p5yA_YkriTHP7SRBCT9bQU?usp=sharing"
   },
   {
     name: "Safety",
-    imagePath: "/assets/demos/Safety.png",
+    imagePath: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=800&fit=crop&q=80",
     link: "https://drive.google.com/drive/folders/1FiL6cT4s8GdFHN2_0SvW_q7U9yepEcJh?usp=sharing"
   }
 ];
 
-export const teamMembers = [
-  {
-    name: "Pooja Pandey",
-    role: "Founder & CEO",
-    bio: "Meet The Disruptor In Chief",
-    image: "/assets/team/pooja%20pandey.png"
-  },
-  {
-    name: "Prajakta Inamke",
-    role: "Webakoof Head",
-    image: "/assets/team/prajakta.jpg"
-  },
-  {
-    name: "Vicky Gaikwad",
-    role: "Business Developer",
-    image: "/assets/team/vicky.jpg"
-  },
-  {
-    name: "Abhishek Jambhale",
-    role: "Junior Developer",
-    image: "/assets/team/abhishek.jpg"
-  },
-  {
-    name: "Vaishnavi Pawar",
-    role: "Junior Developer",
-    image: "/assets/team/vaishnavi.jpg"
-  },
-  {
-    name: "Prathmesh Jagtap",
-    role: "Business Developer",
-    image: "/assets/team/prathmesh.jpg"
-  },
-  {
-    name: "Vrushali Suryawanshi",
-    role: "Graphic Designer",
-    image: "/assets/team/vrushali.jpg"
-  }
-];
+export const teamMembers = [];
 
 export const demoCategories = [
   {
@@ -350,11 +313,24 @@ export const demoCategories = [
 
 export const aboutContent = {
   founder: {
-    name: "Pooja Pandey",
-    title: "Meet The Disruptor In Chief",
-    bio: "Pooja Pandey is the visionary founder of Webakoof, a woman entrepreneur who recognized the gap in the market for fast, affordable, and high-quality web design services. With a passion for technology and a commitment to helping businesses establish their online presence, she built Webakoof on the foundation of delivering excellence in record time. Her leadership has transformed Webakoof into a trusted name for businesses across India seeking professional websites without the wait.",
-    image: "/assets/team/pooja-pandey.jpg"
+    name: "Vedant Raut",
+    title: "Founder, Swami Web",
+    bio: "Vedant Raut is the founder of Swami Web, focused on delivering fast, affordable, and high‑quality websites for growing businesses. With a strong belief that every brand deserves a powerful online presence, he built Swami Web to make professional websites accessible within just 24 hours—without compromising on design or performance.",
+    image: "/assets/misc/icon-10.svg"
   },
-  vision: "To become India's most trusted platform for rapid web development, empowering businesses of all sizes to establish a strong digital presence within 24 hours.",
-  mission: "Our mission is to democratize web design by providing fast, affordable, and professional website solutions. We believe every business deserves a beautiful, functional website, and we're committed to delivering that—without compromise on quality or timeline."
+  vision: "To become a trusted partner for rapid web development, empowering businesses of all sizes to establish a strong digital presence within 24 hours.",
+  mission: "Our mission is to democratize web design by providing fast, affordable, and professional website solutions. We believe every business deserves a beautiful, functional website, and we're committed to delivering that—without compromise on quality or timeline.",
+  whyChoose: [
+    { title: "Creative Excellence", description: "From brand identity to conversion-focused layouts, we cover it all with modern design and clean code." },
+    { title: "End-to-End Solutions", description: "Domain, hosting, SSL, and launch—everything you need in one place, delivered in 24 hours." },
+    { title: "Client-Centric Approach", description: "We listen first. Your goals and audience shape every decision, from structure to visuals." },
+    { title: "Proven Track Record", description: "Hundreds of websites delivered on time with high client satisfaction and lasting results." },
+    { title: "Passion Meets Precision", description: "We care about quality and speed equally—no compromise on either." }
+  ],
+  whatWeBelieve: [
+    "Every business deserves a professional online presence.",
+    "Speed and quality can go hand in hand.",
+    "Clear design and strong UX drive real business results.",
+    "Trust is built through transparency and delivery on promises."
+  ]
 };

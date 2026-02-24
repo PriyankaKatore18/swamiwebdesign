@@ -5,27 +5,27 @@ import BlogCard from '../components/BlogCard';
 
 const Blog = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-cyan-50">
+      <section className="py-20 bg-gradient-to-br from-black via-zinc-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
-              Our Blog
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">
+              Swami Web Insights
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Insights, tips, and guides to help you succeed online
+            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+              Practical articles on websites, marketing, and strategy to help your business grow online.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Blog Posts Section */}
-      <section className="py-20 bg-white" data-testid="blog-posts-section">
+      <section className="py-20 bg-gradient-to-br from-black via-zinc-900 to-black" data-testid="blog-posts-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
@@ -36,22 +36,22 @@ const Blog = () => {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-cyan-50">
+      <section className="py-20 bg-gradient-to-br from-black via-zinc-900 to-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Never Miss an Update
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Stay Ahead With Fresh Ideas
             </h2>
-            <p className="text-gray-600 mb-8 text-lg">
-              Subscribe to our newsletter for the latest articles and tips
+            <p className="text-zinc-300 mb-8 text-lg">
+              Visit our homepage to join the newsletter and receive the latest articles, resources, and offers in your inbox.
             </p>
             <a
               href="/"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-500 text-white font-semibold rounded-xl hover:scale-105 transition-transform"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#ffd33d] text-black font-semibold rounded-xl hover:scale-105 hover:bg-yellow-400 transition-transform shadow-lg shadow-yellow-500/40"
               data-testid="subscribe-newsletter-cta"
             >
               Subscribe Now

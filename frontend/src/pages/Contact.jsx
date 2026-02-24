@@ -4,6 +4,8 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 import axios from 'axios';
 import { toast } from 'sonner';
 import { siteInfo } from '../data/siteData';
+import VideoBreadcrumbBanner from '../components/VideoBreadcrumbBanner';
+import SectionEffect from '../components/SectionEffect';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
@@ -46,27 +48,18 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-cyan-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
-              Keep In Touch With Us
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Have a project in mind or a question for us? We'd love to hear from you—let's build something amazing together!
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-black text-white">
+      <VideoBreadcrumbBanner
+        breadcrumb="Home / Contact"
+        heading="Let’s Talk About Your Website"
+        subtitle="Share a few details about your business and we’ll help you choose the right website package and next steps."
+        videoSrc=""
+        height="short"
+        align="center"
+      />
 
       {/* Contact Section */}
-      <section className="py-20 bg-white" data-testid="contact-section">
+      <SectionEffect variant="page" className="py-20" data-testid="contact-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
@@ -77,31 +70,31 @@ const Contact = () => {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Get In Touch
+                <h2 className="text-3xl font-bold text-white mb-6">
+                  Contact Swami Web
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-8">
-                  We're here to answer your questions and help you take the first step toward a stunning online presence.
+                <p className="text-zinc-300 leading-relaxed mb-8">
+                  We’re available to answer questions, discuss your ideas, and guide you through getting a professional website live in 24 hours.
                 </p>
               </div>
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-[#ffd33d] rounded-xl flex items-center justify-center flex-shrink-0 shadow-md shadow-yellow-500/40">
+                    <Phone className="w-6 h-6 text-black" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
+                    <h3 className="font-semibold text-white mb-1">Phone</h3>
                     <a
                       href={`tel:${siteInfo.phone}`}
-                      className="text-gray-600 hover:text-purple-600 transition block"
+                      className="text-zinc-300 hover:text-[#ffd33d] transition block"
                       data-testid="contact-phone-primary"
                     >
                       {siteInfo.phone}
                     </a>
                     <a
                       href={`tel:${siteInfo.phoneSecondary}`}
-                      className="text-gray-600 hover:text-purple-600 transition block"
+                      className="text-zinc-300 hover:text-[#ffd33d] transition block"
                       data-testid="contact-phone-secondary"
                     >
                       {siteInfo.phoneSecondary}
@@ -110,14 +103,14 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-[#ffd33d] rounded-xl flex items-center justify-center flex-shrink-0 shadow-md shadow-yellow-500/40">
+                    <Mail className="w-6 h-6 text-black" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
+                    <h3 className="font-semibold text-white mb-1">Email</h3>
                     <a
                       href={`mailto:${siteInfo.email}`}
-                      className="text-gray-600 hover:text-purple-600 transition"
+                      className="text-zinc-300 hover:text-[#ffd33d] transition"
                       data-testid="contact-email"
                     >
                       {siteInfo.email}
@@ -126,24 +119,24 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-[#ffd33d] rounded-xl flex items-center justify-center flex-shrink-0 shadow-md shadow-yellow-500/40">
+                    <MapPin className="w-6 h-6 text-black" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
-                    <p className="text-gray-600 leading-relaxed" data-testid="contact-address">
+                    <h3 className="font-semibold text-white mb-1">Service Location</h3>
+                    <p className="text-zinc-300 leading-relaxed" data-testid="contact-address">
                       {siteInfo.address}
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-[#ffd33d] rounded-xl flex items-center justify-center flex-shrink-0 shadow-md shadow-yellow-500/40">
+                    <Clock className="w-6 h-6 text-black" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Working Hours</h3>
-                    <p className="text-gray-600" data-testid="contact-hours">
+                    <h3 className="font-semibold text-white mb-1">Working Hours</h3>
+                    <p className="text-zinc-300" data-testid="contact-hours">
                       {siteInfo.workingHours}
                     </p>
                   </div>
@@ -157,12 +150,16 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <form onSubmit={handleSubmit} className="bg-gradient-to-br from-purple-50 to-cyan-50 rounded-2xl p-8 shadow-lg" data-testid="contact-form">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+              <form
+                onSubmit={handleSubmit}
+                className="bg-zinc-900/90 rounded-2xl p-8 shadow-lg shadow-black/60 border border-yellow-500/30 backdrop-blur-xl"
+                data-testid="contact-form"
+              >
+                <h3 className="text-2xl font-bold text-white mb-6">Send Us a Message</h3>
                 
                 <div className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-zinc-300 mb-2">
                       Your Name
                     </label>
                     <input
@@ -171,14 +168,14 @@ const Contact = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+                      className="w-full px-4 py-3 rounded-xl border border-zinc-700 bg-black/60 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-[#ffd33d] transition"
                       placeholder="John Doe"
                       data-testid="contact-name-input"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-zinc-300 mb-2">
                       Phone Number
                     </label>
                     <input
@@ -187,14 +184,14 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
-                      placeholder="+91 9876543210"
+                      className="w-full px-4 py-3 rounded-xl border border-zinc-700 bg-black/60 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-[#ffd33d] transition"
+                      placeholder="Enter your phone number"
                       data-testid="contact-phone-input"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-zinc-300 mb-2">
                       Email Address
                     </label>
                     <input
@@ -203,14 +200,14 @@ const Contact = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
+                      className="w-full px-4 py-3 rounded-xl border border-zinc-700 bg-black/60 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-[#ffd33d] transition"
                       placeholder="john@example.com"
                       data-testid="contact-email-input"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-zinc-300 mb-2">
                       Your Message
                     </label>
                     <textarea
@@ -219,7 +216,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows="5"
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition resize-none"
+                      className="w-full px-4 py-3 rounded-xl border border-zinc-700 bg-black/60 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-[#ffd33d] transition resize-none"
                       placeholder="Tell us about your project..."
                       data-testid="contact-message-input"
                     ></textarea>
@@ -228,7 +225,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-purple-600 to-cyan-500 text-white py-4 rounded-xl font-semibold hover:scale-105 transition-transform disabled:opacity-50 disabled:hover:scale-100 flex items-center justify-center space-x-2"
+                    className="w-full bg-[#ffd33d] text-black py-4 rounded-xl font-semibold hover:scale-105 hover:bg-yellow-400 transition-transform disabled:opacity-50 disabled:hover:scale-100 flex items-center justify-center space-x-2 shadow-lg shadow-yellow-500/40"
                     data-testid="contact-submit-btn"
                   >
                     <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
@@ -239,7 +236,7 @@ const Contact = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </SectionEffect>
     </div>
   );
 };

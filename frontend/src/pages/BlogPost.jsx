@@ -10,10 +10,10 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-cyan-50">
+      <div className="min-h-screen flex items-center justify-center bg-black text-white">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Post Not Found</h1>
-          <Link to="/blog" className="text-purple-600 hover:text-cyan-500 font-semibold">
+          <h1 className="text-4xl font-bold mb-4">Post Not Found</h1>
+          <Link to="/blog" className="text-[#ffd33d] hover:text-yellow-300 font-semibold">
             ← Back to Blog
           </Link>
         </div>
@@ -22,9 +22,9 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-cyan-50">
+      <section className="py-20 bg-gradient-to-br from-black via-zinc-900 to-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -32,13 +32,13 @@ const BlogPost = () => {
           >
             <Link
               to="/blog"
-              className="inline-flex items-center space-x-2 text-purple-600 hover:text-cyan-500 font-semibold mb-8 transition"
+              className="inline-flex items-center space-x-2 text-[#ffd33d] hover:text-yellow-300 font-semibold mb-8 transition"
               data-testid="back-to-blog-link"
             >
               <ArrowLeft className="w-5 h-5" />
               <span>Back to Blog</span>
             </Link>
-            <div className="flex items-center space-x-4 text-sm text-gray-600 mb-4">
+            <div className="flex items-center space-x-4 text-sm text-zinc-300 mb 4">
               <div className="flex items-center space-x-2">
                 <Calendar className="w-4 h-4" />
                 <span>{post.date}</span>
@@ -48,10 +48,10 @@ const BlogPost = () => {
                 <span>Web Design</span>
               </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-6 leading-tight">
               {post.title}
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-zinc-300 leading-relaxed">
               {post.excerpt}
             </p>
           </motion.div>
@@ -59,13 +59,13 @@ const BlogPost = () => {
       </section>
 
       {/* Featured Image */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="relative h-96 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-purple-100 to-cyan-100"
+            className="relative h-96 rounded-2xl overflow-hidden shadow-2xl bg-zinc-900/80 border border-zinc-800 backdrop-blur-xl"
             data-testid="blog-post-featured-image"
           >
             <div className="absolute inset-0 flex items-center justify-center">
@@ -76,22 +76,22 @@ const BlogPost = () => {
       </section>
 
       {/* Blog Content */}
-      <section className="py-12 bg-white" data-testid="blog-post-content">
+      <section className="py-12 bg-black" data-testid="blog-post-content">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.article
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="prose prose-lg max-w-none"
+            className="prose prose-lg max-w-none bg-zinc-900/80 border border-zinc-800 rounded-2xl p-8 text-zinc-100"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </div>
       </section>
 
       {/* Related Posts */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-purple-50">
+      <section className="py-20 bg-gradient-to-br from-black via-zinc-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">
             More Articles
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -99,7 +99,7 @@ const BlogPost = () => {
               <Link
                 key={relatedPost.id}
                 to={`/blog/${relatedPost.slug}`}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
+                className="group bg-zinc-900/80 rounded-2xl overflow-hidden shadow-lg shadow-black/60 hover:shadow-[0_0_30px_rgba(0,0,0,0.9)] transition-all border border-zinc-800 backdrop-blur-xl"
                 data-testid={`related-post-${index}`}
               >
                 <div className="relative h-48 bg-gradient-to-br from-purple-100 to-cyan-100">
@@ -108,11 +108,11 @@ const BlogPost = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center space-x-2 text-sm text-gray-500 mb-3">
+                  <div className="flex items-center space-x-2 text-sm text-zinc-400 mb-3">
                     <Calendar className="w-4 h-4" />
                     <span>{relatedPost.date}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-purple-600 transition">
+                  <h3 className="text-lg font-bold text-white group-hover:text-[#ffd33d] transition">
                     {relatedPost.title}
                   </h3>
                 </div>

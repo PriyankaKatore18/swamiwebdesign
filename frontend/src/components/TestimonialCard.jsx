@@ -9,7 +9,7 @@ const TestimonialCard = ({ name, rating, text, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
-      className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-shadow border border-gray-100"
+      className="h-full bg-zinc-900/80 backdrop-blur-xl rounded-2xl p-6 shadow-lg shadow-black/60 hover:shadow-[0_0_30px_rgba(0,0,0,0.9)] transition-shadow border border-zinc-800"
       data-testid={`testimonial-card-${index}`}
     >
       <div className="flex items-center space-x-1 mb-3">
@@ -17,14 +17,14 @@ const TestimonialCard = ({ name, rating, text, index }) => {
           <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
         ))}
       </div>
-      <p className="text-gray-700 mb-4 leading-relaxed">{text}</p>
+      <p className="text-zinc-200 mb-4 leading-relaxed">{text}</p>
       <div className="flex items-center space-x-3">
-        <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold">
+        <div className="w-10 h-10 bg-[#ffd33d] rounded-xl flex items-center justify-center text-black font-semibold shadow-md shadow-yellow-500/40">
           {name.charAt(0)}
         </div>
         <div>
-          <p className="font-semibold text-gray-900">{name}</p>
-          <p className="text-sm text-gray-500">Verified Customer</p>
+          <p className="font-semibold text-white">{name}</p>
+          <p className="text-sm text-zinc-400">Verified Customer</p>
         </div>
       </div>
     </motion.div>
