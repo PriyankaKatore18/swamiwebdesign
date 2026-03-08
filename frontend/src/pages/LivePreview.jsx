@@ -32,16 +32,16 @@ const LivePreview = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {demoWebsites.map((item, index) => (
-                <motion.div
-                  key={item.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="bg-zinc-900/80 rounded-2xl shadow-lg shadow-black/60 hover:shadow-[0_0_30px_rgba(0,0,0,0.9)] transition overflow-hidden border border-zinc-800 backdrop-blur-xl h-full"
-                  data-testid={`demo-website-${index}`}
-                >
-                <a href={item.link} target="_blank" rel="noopener noreferrer" className="block">
+              <motion.div
+                key={item.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="bg-zinc-900/80 rounded-2xl shadow-lg shadow-black/60 hover:shadow-[0_0_30px_rgba(0,0,0,0.9)] transition overflow-hidden border border-zinc-800 backdrop-blur-xl"
+                data-testid={`demo-website-${index}`}
+              >
+                <div>
                   <div className="aspect-square bg-gray-50">
                     <img
                       src={item.imagePath}
@@ -50,17 +50,9 @@ const LivePreview = () => {
                       loading="lazy"
                     />
                   </div>
-                </a>
-                <div className="p-6 flex flex-col h-full">
-                  <h3 className="text-xl font-semibold text-white mb-4">{item.name}</h3>
-                  <a
-                    className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-[#ffd33d] text-black font-semibold hover:bg-yellow-400 transition mt-auto"
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View full demo
-                  </a>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white">{item.name}</h3>
                 </div>
               </motion.div>
             ))}
