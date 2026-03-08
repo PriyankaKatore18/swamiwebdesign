@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { siteInfo, navLinks } from '../data/siteData';
 
 const Footer = () => {
@@ -56,13 +56,6 @@ const Footer = () => {
                   >
                     {siteInfo.phone}
                   </a>
-                  <a
-                    href={`tel:${siteInfo.phoneSecondary}`}
-                    className="text-gray-300 hover:text-[#ffd33d] transition block"
-                    data-testid="footer-phone-secondary"
-                  >
-                    {siteInfo.phoneSecondary}
-                  </a>
                 </div>
               </li>
               <li className="flex items-start space-x-3">
@@ -78,7 +71,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Address & Hours */}
+          {/* Address */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Where We Work From</h3>
             <ul className="space-y-3">
@@ -86,12 +79,6 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-[#ffd33d] flex-shrink-0 mt-0.5" />
                 <p className="text-gray-300 text-sm leading-relaxed" data-testid="footer-address">
                   {siteInfo.address}
-                </p>
-              </li>
-              <li className="flex items-start space-x-3">
-                <Clock className="w-5 h-5 text-[#ffd33d] flex-shrink-0 mt-0.5" />
-                <p className="text-gray-300 text-sm" data-testid="footer-hours">
-                  {siteInfo.workingHours}
                 </p>
               </li>
             </ul>

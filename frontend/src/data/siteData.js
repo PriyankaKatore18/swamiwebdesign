@@ -7,13 +7,11 @@ export const siteInfo = {
   aboutIntroImagePath: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&h=450&fit=crop&q=80",
   aboutBreadcrumbBgPath: "/assets/hero/banner.png",
   footerBgClass: "bg-black",
-  phone: "+91 9307533577",
-  phoneSecondary: "+91 9307533577",
-  whatsappNumber: "918446079635",
+  phone: "9322656602",
+  whatsappNumber: "919322656602",
   whatsappMessage: "book a demo wensite for your business",
-  email: "swamiweb18@gmail.com",
+  email: "swamisoftwaredevelopment@gmail.com",
   address: "We work remotely with clients across India, so you can get your website built from anywhere.",
-  workingHours: "Mon - Fri 9:00 AM - 6:00 PM",
   copyright: "Copyright © 2025 All rights reserved By Swami Web",
   description: "Swami Web delivers fast, high-converting business websites with modern responsive design, free domain, SSL, and managed hosting — all professionally launched within 24 hours."
 };
@@ -166,48 +164,117 @@ export const blogPosts = [
 
 export const packages = [
   {
-    name: "Basic",
+    name: "Basic Plan",
     price: "9,999",
     features: [
-      "Clean, mobile-friendly single-page website",
+      "Clean mobile-friendly single page website",
       "Free Domain (.in or .com)",
       "3 Months Free Hosting",
       "Free SSL Certificate",
-      "1+3 Pages Website",
-      "Responsive & Mobile-Friendly Design",
-      "In 24 Hours Delivery",
-      "Whatsapp integration",
-      "Mail Integration (Professional design included)"
+      "Up to 3 Pages",
+      "Responsive Mobile Design",
+      "WhatsApp Integration",
+      "Contact Form",
+      "Delivery in 24-48 Hours"
     ],
     popular: false
   },
   {
-    name: "Standard",
+    name: "Standard Plan",
     price: "14,999",
     features: [
+      "Professional multi-page website",
       "Free Domain (.in or .com)",
       "6 Months Free Hosting",
       "Free SSL Certificate",
-      "1+5 Pages Website",
-      "Responsive & Mobile-Friendly Design",
-      "In 24 Hours Delivery",
-      "Whatsapp integration",
-      "Mail Integration (Professional design included)"
+      "Up to 5 Pages Website",
+      "Responsive Mobile Design",
+      "WhatsApp Integration",
+      "Email Integration",
+      "Contact Form + Lead Capture",
+      "Delivery in 2-3 Days"
     ],
-    popular: true
+    popular: false
   },
   {
-    name: "Advance",
+    name: "Advanced Plan",
     price: "24,999",
     features: [
+      "Professional business website",
       "Free Domain (.in or .com)",
       "1 Year Free Hosting",
       "Free SSL Certificate",
-      "1+6 Pages Website",
-      "Responsive & Mobile-Friendly Design",
-      "In 24 Hours Delivery",
-      "Whatsapp integration",
-      "Mail Integration (Professional design included)"
+      "Up to 6 Pages Website",
+      "Responsive & SEO Friendly Design",
+      "WhatsApp Integration",
+      "Email Integration",
+      "Contact Form + Database Storage",
+      "Basic Analytics Setup",
+      "Delivery in 3-4 Days"
+    ],
+    popular: false
+  },
+  {
+    name: "Business Website Plan",
+    price: "39,999",
+    features: [
+      "Frontend + Backend Development",
+      "Up to 10 Pages Website",
+      "Admin Panel",
+      "Database Integration",
+      "User Login / Signup System",
+      "Contact Form with Database",
+      "SEO Optimized Structure",
+      "Responsive Mobile Design",
+      "Free Domain",
+      "1 Year Hosting",
+      "SSL Certificate",
+      "WhatsApp Integration",
+      "Email Integration",
+      "Delivery in 5-7 Days"
+    ],
+    popular: true,
+    badge: "MOST POPULAR"
+  },
+  {
+    name: "Startup Web Application Plan",
+    price: "69,999",
+    features: [
+      "Full Stack Web Application",
+      "React / Modern Frontend",
+      "Backend API Development",
+      "Secure Database Integration",
+      "Admin Dashboard",
+      "User Authentication System",
+      "Payment Gateway Integration",
+      "Dynamic Pages",
+      "File Upload System",
+      "API Integration",
+      "Free Domain",
+      "1 Year Hosting",
+      "SSL Certificate",
+      "Delivery in 10-14 Days"
+    ],
+    popular: false
+  },
+  {
+    name: "Enterprise Software Plan",
+    price: "2,49,999",
+    features: [
+      "Complete Custom Software Development",
+      "Frontend + Backend + Database",
+      "Custom UI/UX Design",
+      "Advanced Admin Dashboard",
+      "Role Based Authentication",
+      "REST API Development",
+      "Payment Gateway Integration",
+      "Cloud Deployment (AWS / Vercel / DigitalOcean)",
+      "High Security Architecture",
+      "Performance Optimization",
+      "Free Domain",
+      "1 Year Hosting",
+      "SSL Certificate",
+      "Delivery in 3-6 Weeks"
     ],
     popular: false
   }

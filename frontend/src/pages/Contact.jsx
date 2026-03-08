@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import axios from 'axios';
 import { toast } from 'sonner';
 import { siteInfo } from '../data/siteData';
@@ -92,13 +92,6 @@ const Contact = () => {
                     >
                       {siteInfo.phone}
                     </a>
-                    <a
-                      href={`tel:${siteInfo.phoneSecondary}`}
-                      className="text-zinc-300 hover:text-[#ffd33d] transition block"
-                      data-testid="contact-phone-secondary"
-                    >
-                      {siteInfo.phoneSecondary}
-                    </a>
                   </div>
                 </div>
 
@@ -130,17 +123,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-[#ffd33d] rounded-xl flex items-center justify-center flex-shrink-0 shadow-md shadow-yellow-500/40">
-                    <Clock className="w-6 h-6 text-black" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-white mb-1">Working Hours</h3>
-                    <p className="text-zinc-300" data-testid="contact-hours">
-                      {siteInfo.workingHours}
-                    </p>
-                  </div>
-                </div>
               </div>
             </motion.div>
 

@@ -4,18 +4,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import LivePreview from "./pages/LivePreview";
 import Packages from "./pages/Packages";
 import Contact from "./pages/Contact";
+import { siteInfo } from "./data/siteData";
 
 function App() {
-  const whatsappNumber = "918446079635";
-
   return (
     <div className="App">
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -27,7 +28,7 @@ function App() {
         <Footer />
         <a
           className="whatsapp-fab"
-          href={`https://wa.me/${whatsappNumber}`}
+          href={`https://wa.me/${siteInfo.whatsappNumber}`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
