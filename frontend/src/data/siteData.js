@@ -7,10 +7,10 @@ export const siteInfo = {
   aboutIntroImagePath: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&h=450&fit=crop&q=80",
   aboutBreadcrumbBgPath: "/assets/hero/banner.png",
   footerBgClass: "bg-black",
-  phone: "9322656602",
-  whatsappNumber: "919322656602",
+  phone: "8446079635",
+  whatsappNumber: "918446079635",
   whatsappMessage: "book a demo wensite for your business",
-  email: "swamisoftwaredevelopment@gmail.com",
+  email: "swamidevhub@gmail.com",
   address: "We work remotely with clients across India, so you can get your website built from anywhere.",
   copyright: "Copyright © 2025 All rights reserved By Swami Web",
   description: "Swami Web delivers fast, high-converting business websites with modern responsive design, free domain, SSL, and managed hosting — all professionally launched within 24 hours."
@@ -19,7 +19,6 @@ export const siteInfo = {
 export const navLinks = [
   { name: "Home", path: "/" },
   { name: "About Swami Web", path: "/about-swami-web" },
-  { name: "Live Website Preview", path: "/live-website-preview" },
   { name: "Package Plans", path: "/package-plans" },
   { name: "Contact", path: "/contact" }
 ];
@@ -294,7 +293,7 @@ export const demoWebsites = [
   {
     name: "Realestate",
     imagePath: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=800&fit=crop&q=80",
-    link: "https://drive.google.com/drive/folders/1_iPLnT6fY0kUnBqDgHCL42ey2w1RCTmU?usp=sharing"
+    link: "https://elitestaypg.com"
   },
   {
     name: "Grampanchayat",
@@ -344,7 +343,7 @@ export const demoCategories = [
   {
     name: "Real Estate",
     icon: "Building2",
-    link: "https://drive.google.com/drive/folders/1_iPLnT6fY0kUnBqDgHCL42ey2w1RCTmU?usp=sharing"
+    link: "https://elitestaypg.com"
   },
   {
     name: "Gram Panchayat",

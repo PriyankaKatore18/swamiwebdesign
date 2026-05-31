@@ -32,13 +32,16 @@ const LivePreview = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {demoWebsites.map((item, index) => (
-              <motion.div
+              <motion.a
                 key={item.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
                 className="bg-zinc-900/80 rounded-2xl shadow-lg shadow-black/60 hover:shadow-[0_0_30px_rgba(0,0,0,0.9)] transition overflow-hidden border border-zinc-800 backdrop-blur-xl"
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 data-testid={`demo-website-${index}`}
               >
                 <div>
@@ -54,7 +57,7 @@ const LivePreview = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-white">{item.name}</h3>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </div>
