@@ -1,104 +1,47 @@
 import React from 'react';
 import './WhyChooseVisual.css';
 
-/**
- * Why Choose visual – designcrew style: central leaf/shield with three lines,
- * concentric golden rings, bottom triangle, and four icons (blue squares L/R, yellow dots top/bottom).
- */
+const orbitMetrics = [
+  { label: 'SEO', className: 'why-choose-visual__metric--seo', delay: '0s' },
+  { label: 'Speed', className: 'why-choose-visual__metric--speed', delay: '0.35s' },
+  { label: 'Mobile', className: 'why-choose-visual__metric--mobile', delay: '0.7s' },
+  { label: 'Leads', className: 'why-choose-visual__metric--leads', delay: '1.05s' },
+];
+
 const WhyChooseVisual = () => {
-  const cx = 200;
-  const cy = 200;
-  const rInner = 95;
-  const rMid = 115;
-  const rOuter = 155;
-  // Icons between mid and outer ring
-  const rIcons = 135;
-  const iconYTop = cy - rIcons;
-  const iconYBottom = cy + rIcons;
-  const iconXLeft = cx - rIcons;
-  const iconXRight = cx + rIcons;
-
   return (
-    <div className="why-choose-visual" aria-hidden>
-      <svg
-        className="why-choose-visual__svg"
-        viewBox="0 0 400 400"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <defs>
-          <filter id="why-choose-glow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="1.5" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-          <linearGradient id="why-choose-gold" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#ffd33d" stopOpacity="0.95" />
-            <stop offset="100%" stopColor="#f59e0b" stopOpacity="0.8" />
-          </linearGradient>
-          <linearGradient id="why-choose-blue" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#60a5fa" />
-            <stop offset="100%" stopColor="#3b82f6" />
-          </linearGradient>
-        </defs>
+    <div className="why-choose-visual" aria-hidden="true">
+      <div className="why-choose-visual__glow" />
+      <div className="why-choose-visual__orbit why-choose-visual__orbit--outer" />
+      <div className="why-choose-visual__orbit why-choose-visual__orbit--inner" />
 
-        {/* Outer thick ring */}
-        <circle
-          cx={cx}
-          cy={cy}
-          r={rOuter}
-          className="why-choose-visual__ring why-choose-visual__ring--outer"
-          stroke="url(#why-choose-gold)"
-          strokeWidth="3"
-          fill="none"
-        />
-        {/* Small upward triangle at bottom center of outer ring */}
-        <path
-          d={`M ${cx} ${cy + rOuter - 12} L ${cx - 8} ${cy + rOuter + 4} L ${cx + 8} ${cy + rOuter + 4} Z`}
-          fill="url(#why-choose-gold)"
-          className="why-choose-visual__triangle"
-        />
-        {/* Inner two concentric circles */}
-        <circle
-          cx={cx}
-          cy={cy}
-          r={rMid}
-          className="why-choose-visual__circle"
-          stroke="url(#why-choose-gold)"
-          strokeWidth="1.5"
-          fill="none"
-          opacity="0.85"
-        />
-        <circle
-          cx={cx}
-          cy={cy}
-          r={rInner}
-          className="why-choose-visual__circle why-choose-visual__circle--inner"
-          stroke="url(#why-choose-gold)"
-          strokeWidth="1"
-          fill="none"
-          opacity="0.7"
-        />
+      <div className="why-choose-visual__dashboard">
+        <div className="why-choose-visual__browser-bar">
+          <span className="why-choose-visual__dot" />
+          <span className="why-choose-visual__dot" />
+          <span className="why-choose-visual__dot" />
+          <span className="why-choose-visual__browser-pill">Rank + Convert</span>
+        </div>
 
-        {/* Central leaf/shield shape with three horizontal lines */}
-        <g className="why-choose-visual__center" filter="url(#why-choose-glow)">
-          <path
-            d={`M ${cx} ${cy - 72} Q ${cx + 70} ${cy} ${cx} ${cy + 72} Q ${cx - 70} ${cy} ${cx} ${cy - 72} Z`}
-            stroke="url(#why-choose-gold)"
-            strokeWidth="2"
-            fill="none"
-            className="why-choose-visual__leaf"
-          />
-          <line x1={cx - 50} y1={cy - 22} x2={cx + 50} y2={cy - 22} stroke="url(#why-choose-gold)" strokeWidth="1.5" opacity="0.9" className="why-choose-visual__line" />
-          <line x1={cx - 50} y1={cy} x2={cx + 50} y2={cy} stroke="url(#why-choose-gold)" strokeWidth="1.5" opacity="0.9" className="why-choose-visual__line" />
-          <line x1={cx - 50} y1={cy + 22} x2={cx + 50} y2={cy + 22} stroke="url(#why-choose-gold)" strokeWidth="1.5" opacity="0.9" className="why-choose-visual__line" />
-        </g>
+        <div className="why-choose-visual__dashboard-body">
+          <span className="why-choose-visual__line why-choose-visual__line--lg" />
+          <span className="why-choose-visual__line" />
+          <span className="why-choose-visual__line why-choose-visual__line--sm" />
 
-        {/* Four icons: yellow dots top & bottom, blue squares left & right */}
-        <circle cx={cx} cy={iconYTop} r="7" fill="url(#why-choose-gold)" className="why-choose-visual__icon why-choose-visual__icon--top" />
-        <circle cx={cx} cy={iconYBottom} r="7" fill="url(#why-choose-gold)" className="why-choose-visual__icon why-choose-visual__icon--bottom" />
-        <rect x={iconXLeft - 8} y={cy - 8} width="16" height="16" rx="3" fill="url(#why-choose-blue)" className="why-choose-visual__icon why-choose-visual__icon--left" />
-        <rect x={iconXRight - 8} y={cy - 8} width="16" height="16" rx="3" fill="url(#why-choose-blue)" className="why-choose-visual__icon why-choose-visual__icon--right" />
-      </svg>
+          <div className="why-choose-visual__chart" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+        </div>
+      </div>
+
+      {orbitMetrics.map((metric) => (
+        <div key={metric.label} className={`why-choose-visual__metric ${metric.className}`}>
+          <span style={{ animationDelay: metric.delay }}>{metric.label}</span>
+        </div>
+      ))}
     </div>
   );
 };

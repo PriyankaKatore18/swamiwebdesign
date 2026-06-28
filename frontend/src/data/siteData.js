@@ -1,6 +1,6 @@
 export const siteInfo = {
   name: "Swami Web",
-  tagline: "High-converting business websites in 24 hours",
+  tagline: "SEO-friendly business websites in 24 hours",
   logoPath: "/assets/misc/logo.png",
   heroImagePath: "/assets/hero/hero-image.png",
   heroBannerPath: "/assets/hero/banner.png",
@@ -15,7 +15,7 @@ export const siteInfo = {
   address: "We work remotely with clients across India, so you can get your website built from anywhere.",
   workingHours: "Mon - Fri 9:00 AM - 6:00 PM",
   copyright: "Copyright © 2025 All rights reserved By Swami Web",
-  description: "Swami Web delivers fast, high-converting business websites with modern responsive design, free domain, SSL, and managed hosting — all professionally launched within 24 hours."
+  description: "Swami Web is a website development company building SEO-friendly, mobile-responsive websites that load fast, convert visitors, and help businesses rank better online."
 };
 
 export const navLinks = [
@@ -320,25 +320,19 @@ export const demoCategories = [
 ];
 
 export const aboutContent = {
-  founder: {
-    name: "Vedant Raut",
-    title: "Founder, Swami Web",
-    bio: "Vedant Raut is the founder of Swami Web, focused on delivering fast, affordable, and high‑quality websites for growing businesses. With a strong belief that every brand deserves a powerful online presence, he built Swami Web to make professional websites accessible within just 24 hours—without compromising on design or performance.",
-    image: "/assets/misc/icon-10.svg"
-  },
-  vision: "To become a trusted partner for rapid web development, empowering businesses of all sizes to establish a strong digital presence within 24 hours.",
-  mission: "Our mission is to democratize web design by providing fast, affordable, and professional website solutions. We believe every business deserves a beautiful, functional website, and we're committed to delivering that—without compromise on quality or timeline.",
+  vision: "To be the trusted website development partner for businesses that need fast launches, strong SEO foundations, and websites that convert visitors into leads.",
+  mission: "Our mission is to deliver SEO-friendly website development that is fast, affordable, and built to rank. We help businesses launch professional websites with clean structure, mobile-responsive design, and performance-first code without compromising on quality or timeline.",
   whyChoose: [
-    { title: "Creative Excellence", description: "From brand identity to conversion-focused layouts, we cover it all with modern design and clean code." },
-    { title: "End-to-End Solutions", description: "Domain, hosting, SSL, and launch—everything you need in one place, delivered in 24 hours." },
-    { title: "Client-Centric Approach", description: "We listen first. Your goals and audience shape every decision, from structure to visuals." },
-    { title: "Proven Track Record", description: "Hundreds of websites delivered on time with high client satisfaction and lasting results." },
-    { title: "Passion Meets Precision", description: "We care about quality and speed equally—no compromise on either." }
+    { title: "SEO-Friendly Website Development", description: "We build clean, crawlable websites with semantic HTML, clear headings, and structured content that supports better search visibility." },
+    { title: "Fast, Mobile-Responsive Design", description: "Every website is optimized for smartphones, tablets, and desktops so users get a smooth experience on every device." },
+    { title: "Conversion-Focused Pages", description: "We design service pages, landing pages, and contact flows that turn website traffic into real enquiries." },
+    { title: "Technical SEO and Performance", description: "From image compression to metadata and Core Web Vitals, we handle the details that help websites load quickly and rank better." },
+    { title: "Reliable Launch Support", description: "We guide you through hosting, domain, SSL, and post-launch support so your website stays secure and ready to grow." }
   ],
   whatWeBelieve: [
-    "Every business deserves a professional online presence.",
-    "Speed and quality can go hand in hand.",
-    "Clear design and strong UX drive real business results.",
-    "Trust is built through transparency and delivery on promises."
+    "Every business should have a search-ready website that looks professional and loads fast.",
+    "Good website development should balance design, SEO, and usability from day one.",
+    "Fast delivery matters, but quality, clarity, and trust matter just as much.",
+    "A website should not just look good - it should generate leads and support growth."
   ]
 };

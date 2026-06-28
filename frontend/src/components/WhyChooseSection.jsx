@@ -25,14 +25,31 @@ const WhyChooseSection = () => {
 
           {/* Right: Heading + Accordion */}
           <div>
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-3 text-xs uppercase tracking-[0.35em] text-[#ffd33d]"
+            >
+              SEO-Friendly Website Development
+            </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-10 leading-tight"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight"
             >
-              Why Choose <span className="text-[#ffd33d]">{siteInfo.name}?</span>
+              Why Choose <span className="text-[#ffd33d]">{siteInfo.name}</span> for Website Development?
             </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.06 }}
+              className="mt-4 mb-10 max-w-2xl text-base leading-relaxed text-zinc-400"
+            >
+              We combine SEO, speed, and conversion-focused design to build websites that help businesses rank for website development and related local service searches.
+            </motion.p>
 
             <div className="space-y-0 border-t border-zinc-700">
               {items.map((item, index) => {
